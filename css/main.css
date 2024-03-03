@@ -1,0 +1,131 @@
+:root {
+    /*
+    https://coolors.co/1a1423-292136-345511-d0db97-fffffc
+    */
+    --top-bar-color-dark: #292136;
+    --text-color-dark: #FFFFFC;
+    --body-color-dark: #1A1423;
+    --content-bg-color-dark: #292136;
+    --link-color-dark: #D0DB97;
+    --link-hover-color-dark: #345511;
+    --top-bar-svg-color-dark: #000000;
+
+    --top-bar-color-light: #FFFFF0;
+    --text-color-light: #1A1423;
+    --body-color-light: #D0DB97;
+    --content-bg-color-light: #FFFFF0;
+    --link-color-light: #292136;
+    --link-hover-color-light: #345511;
+    --top-bar-svg-color-light: 0xFFFFFF;
+
+    --top-bar-color: var(--top-bar-color-dark);
+    --text-color: var(--text-color-dark);
+    --body-color: var(--body-color-dark);
+    --content-bg-color: var(--content-bg-color-dark);
+    --link-color: var(--link-color-dark);
+    --link-hover-color: var(--link-hover-color-dark);
+    --top-bar-svg-color: var(--top-bar-svg-color-dark);
+
+    --transition-time: 200ms;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: var(--transition-time);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    transition: var(--transition-time);
+}
+
+#top-bar-pfp {
+    clip-path: circle();
+    width: 4em;
+    height: 4em;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+
+@media screen and (width >= 720px) {
+    #top-bar {
+        position: sticky;
+        background-color: var(--top-bar-color);
+        padding-left: 16.5%;
+        padding-right: 16.5%;
+        padding-top: 0.58em;
+        padding-bottom: 0.58em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #top-bar {
+        position: sticky;
+        background-color: var(--top-bar-color);
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+        padding-top: 0.58em;
+        padding-bottom: 0.58em;
+    }
+}
+
+
+#top-bar-content {
+    width: 100%;
+}
+
+#top-bar-content > * {
+    display: inline;
+    font-size: 1.25em;
+}
+
+#top-bar-content ul {
+    position: relative;
+    list-style: none;
+    float: right;
+}
+
+.nav-links svg {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    fill: var(--text-color) !important;
+}
+
+.nav-links * {
+    display: inline-block;
+}
+
+.nav-links:hover {
+    cursor: pointer;
+}
+
+.nav-links li + li {
+    margin-left: 0.66em;
+}
+
+#light-mode-nav {
+    visibility: collapse;
+}
+
+.main-content {
+    background-color: var(--content-bg-color);
+    margin: auto;
+    left: 33%;
+    max-width: 66%;
+    margin-top: 5em;
+    padding: 2em;
+    border-radius: 4px;
+}
+
+.main-content p {
+    font-size: 1.25em;
+}
