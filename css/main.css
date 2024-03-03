@@ -70,8 +70,8 @@ a:hover {
     #top-bar {
         position: sticky;
         background-color: var(--top-bar-color);
-        padding-left: 4.5%;
-        padding-right: 4.5%;
+        padding-left: 4%;
+        padding-right: 4%;
         padding-top: 0.58em;
         padding-bottom: 0.58em;
     }
