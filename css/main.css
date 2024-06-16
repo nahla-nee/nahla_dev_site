@@ -35,48 +35,23 @@ body {
     color: var(--text-color);
 }
 
-a {
+.main-content a {
     text-decoration: none;
     color: var(--link-color);
     transition: var(--transition-time);
 }
 
-a:hover {
+.main-content a:hover {
     color: var(--link-hover-color);
     transition: var(--transition-time);
 }
 
 #top-bar-pfp {
     clip-path: circle();
-    width: 4em;
-    height: 4em;
     vertical-align: middle;
-    margin-right: 1em;
+    width: 3em;
+    height: 3em;
 }
-
-
-@media screen and (width >= 490px) {
-    #top-bar {
-        position: sticky;
-        background-color: var(--top-bar-color);
-        padding-left: 16.5%;
-        padding-right: 16.5%;
-        padding-top: 0.58em;
-        padding-bottom: 0.58em;
-    }
-}
-
-@media screen and (width < 490px) {
-    #top-bar {
-        position: sticky;
-        background-color: var(--top-bar-color);
-        padding-left: 4%;
-        padding-right: 4%;
-        padding-top: 0.58em;
-        padding-bottom: 0.58em;
-    }
-}
-
 
 #top-bar-content {
     width: 100%;
@@ -85,6 +60,7 @@ a:hover {
 #top-bar-content > * {
     display: inline;
     font-size: 1.25em;
+    vertical-align: middle;
 }
 
 #top-bar-content ul {
@@ -93,22 +69,28 @@ a:hover {
     float: right;
 }
 
-.nav-links svg {
+#nav-links svg {
     width: 1.25em;
     height: 1.25em;
-    vertical-align: middle;
-    fill: var(--text-color) !important;
+    fill: var(--text-color);
+    stroke: var(--text-color);
 }
 
-.nav-links * {
+#nav-links * {
     display: inline-block;
 }
 
-.nav-links:hover {
+#nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition-time);
+}
+
+#nav-links > li:hover {
     cursor: pointer;
 }
 
-.nav-links li + li {
+#nav-links li + li {
     margin-left: 0.66em;
 }
 
@@ -122,6 +104,7 @@ a:hover {
     left: 33%;
     max-width: 66%;
     margin-top: 5em;
+    margin-bottom: 5em;
     padding: 2em;
     border-radius: 4px;
 }
@@ -129,3 +112,37 @@ a:hover {
 .main-content p {
     font-size: 1.25em;
 }
+
+.side-menu-active {
+}
+
+@media screen and (width >= 490px) {
+    #top-bar-pfp {
+        margin-right: 1em;
+    }
+
+    #top-bar {
+        position: sticky;
+        background-color: var(--top-bar-color);
+        padding-left: 16.5%;
+        padding-right: 16.5%;
+        padding-top: 0.58em;
+        padding-bottom: 0.58em;
+    }
+}
+
+@media screen and (width < 490px) {
+    #top-bar {
+        position: sticky;
+        background-color: var(--body-color);
+        padding-left: 0;
+        padding-right: 15%;
+        padding-top: 0.58em;
+        padding-bottom: 0.58em;
+    }
+
+    #top-bar-greet, #top-bar-pfp{
+        display: none;
+    }
+}
+
