@@ -38,11 +38,11 @@ let hambuger_svg = `
 let top_bar_html = `
 <div id="top-bar">
     <div id="top-bar-content">
-        <img src="../assets/pfp.jpg" id="top-bar-pfp" alt="A picture of me hugging a tree in the Hoh rainforest in Washington!">
+        <img src="assets/pfp.jpg" id="top-bar-pfp" alt="A picture of me hugging a tree in the Hoh rainforest in Washington!">
         <span id="top-bar-greet">Hi, I'm Nahla!</span>
         <ul id="nav-links">
-            <li id="home-link"><a href="index.html">Home</a></li>
-            <li id="projects-link"><a href="projects.html">Projects</a></li>
+            <li id="home-link"><a href="/html/index.html">Home</a></li>
+            <li id="projects-link"><a href="/html/projects.html">Projects</a></li>
             <li id="github-link"><a href="https://github.com/nahla-nee" target="_blank">Github</a></li>
             <li onclick="light_mode()" id="toggle-color">${light_mode_svg}</li>
         </ul>
